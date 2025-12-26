@@ -1,0 +1,107 @@
+/* Beautiful gradient background */
+body {
+    font-family: 'Segoe UI', Arial;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(-45deg, #89f7fe, #66a6ff, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientBG 7s ease infinite;
+}
+
+/* Centered compact card */
+.container {
+    width: 360px;
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    animation: fadeSlide 0.7s ease;
+}
+
+/* Stylish Title */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2a4d69;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: #2a4d69;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #b0bec5;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.4);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Creative Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Smooth entrance animation 
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }*/
+
+    /* Smooth gradient animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

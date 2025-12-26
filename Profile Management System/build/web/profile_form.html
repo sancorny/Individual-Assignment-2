@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Form</title>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #89f7fe, #66a6ff, #fbc2eb, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradient 7s ease infinite;
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            width: 500px;
+            margin-top: 20px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #4a90e2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .links a {
+            margin: 0 10px;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Student Profile System</h1>
+    
+    <div class="container">
+        <h2>Create Profile</h2>
+        <form action="ProfileServlet" method="POST">
+            Name: <input type="text" name="name" required><br>
+            Student ID: <input type="text" name="studentId" required><br>
+            Program: 
+            <select name="program">
+                <option value="">Select</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="IT">IT</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Other">Other</option>
+            </select><br>
+            Email: <input type="email" name="email" required><br>
+            Hobbies: <input type="text" name="hobbies"><br>
+            Introduction: <textarea name="intro" rows="3"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div class="links">
+            <a href="viewProfiles.jsp">View All Profiles</a>
+            <a href="search.jsp">Search</a>
+        </div>
+    </div>
+</body>
+</html>
